@@ -2,10 +2,10 @@ const csv = require('csv-parser')
 const fs = require('fs')
 const path = require('path')
 
-function getCSVData() {
+function getCSVData(fileName) {
   return new Promise((resolve, reject) => {
     const records = [];
-    fs.createReadStream(path.resolve(__dirname, '..', 'data', 'Sample2.csv'))
+    fs.createReadStream(path.resolve(__dirname, '..', 'uploads', fileName))
       .pipe(csv())
       .on('data', row => records.push(row))
       .on('end', () => resolve(records))

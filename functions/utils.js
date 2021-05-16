@@ -52,7 +52,6 @@ function calculateDifferenceBetweenDates(date) {
   const day = parseInt(date[0])
   const month = parseInt(date[1])
   const fullYear = parseInt(date[2].length === 2 ? '20' + date[2] : date[2])
-  console.log({ day, month, fullYear })
   const currentDate = new Date();
   const futureDate = new CustomDate()
   futureDate.setDateCustom(day, month, fullYear)

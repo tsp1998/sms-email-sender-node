@@ -35,8 +35,6 @@ async function send(messageData) {
   const wantToScheduleMessage = checkIfWantToScheduleMessage(messageData)
   const isValidTimeToSendTextMessage = checkIsValidTimeForTextMessage(messageData['Country'])
 
-  console.log(`wantToScheduleMessage`, wantToScheduleMessage)
-
   if (wantToScheduleMessage) {
     console.log('Scheduling Message')
     scheduleTextMessage(messageData)

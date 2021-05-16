@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send Email And SMS</title>
+</head>
+
+<body>
+  <h1>Send Email And SMS</h1>
+
+  <form action="/fileUpload" enctype="multipart/form-data" method="POST">
+    <div class="form-group">
+      <label for="file">File to Upload</label>
+      <input type="file" name="file" id="file">
+    </div>
+    <button type="submit">Upload File</button>
+  </form>
+
+  <script>
+    window.onload = function () {
+      const form = document.querySelector('form')
+      
+      // form.onsubmit = function (e) {
+      //   e.preventDefault()
+      //   const fileInput = document.querySelector('#file');
+      //   const formData = new FormData();
+      //   formData.append('file', fileInput.files[0])
+      //   fetch('/fileUpload', {
+      //     method: 'POST',
+      //     headers: {
+      //       'Content-Type': 'multipart/form-data;boundary=----WebKitFormBoundaryyrV7KO0BoCBuDbTL'
+      //     },
+      //     body: formData
+      //   })
+      //     .then(res => console.log(`res`, res))
+      //     .catch(err => console.log(`err`, err))
+      // }
+    }
+  </script>
+</body>
+
+</html>
